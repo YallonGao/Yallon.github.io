@@ -1,1 +1,123 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>bubble清单</title><link href=/static/css/app.708ce172.css rel=preload as=style><link href=/static/css/chunk-vendors.57db8905.css rel=preload as=style><link href=/static/js/app.3f39a52d.js rel=preload as=script><link href=/static/js/chunk-vendors.ddcb6f91.js rel=preload as=script><link href=/static/css/chunk-vendors.57db8905.css rel=stylesheet><link href=/static/css/app.708ce172.css rel=stylesheet></head><body><noscript><strong>We're sorry but dsb doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/static/js/chunk-vendors.ddcb6f91.js></script><script src=/static/js/app.3f39a52d.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo清单</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+
+<body>
+    <div id="todo">
+        <!-- 顶部区域 -->
+        <div class="top-header">
+            <h1>Todo</h1>
+            <div class="input">
+                <input type="text" autocomplete="off" v-model="inputInfo" @blur="recoverInputInfo()" @focus="clearInputInfo()" @keyup.enter="addTodo()">
+                <!-- <img src="../static/images/append.svg" alt="" @click="addTodo()" class="icon"> -->
+            </div>
+        </div>
+        <!-- 列表区域 -->
+        <div class="todo-main">
+            <div class="todolist" v-for="(item,index) in todoList" @mouseover="switchIconSeen(index)" @mouseleave="switchIconNoSeen(index)">
+                <span class="item-index">{{ index+1 }}.</span>
+                <span calss="item-text" :class="{isFinish:item.isFinish}">{{
+                        item.text }}</span>
+                <span class="item-icons" v-show="item.isSeen">
+                        <img
+                            :src="item.isFinish?'../static/images/finish.svg':'../static/images/revoke.svg'"
+                            @click="switchTodoFinish(index)" class="icon"
+                            alt="">
+                        <img src="../static/images/delete.svg" alt=""
+                            @click="deleteTodo(index)" class="icon">
+                    </span>
+            </div>
+        </div>
+        <!-- 统计和清空当前页面 -->
+        <div class="todo-footer">
+            <span class="todo-count">
+                    <strong>{{ todoList.length }}条记录</strong>
+                </span>
+            <button v-show="todoList.length!=0" class="clear-completed" @click="clearAllTodo()">Clear</button>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer class="info">
+        <p>
+            @Yallon |
+            <a href="https://github.com/YallonGao">GIthub主页</a> |
+            <a href="mailto:yallongao@gmail.com">联系邮箱</a>
+        </p>
+    </footer>
+    <style>
+        .isFinish {
+            text-decoration: line-through;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: "#todo",
+            data: {
+                inputInfo: "请输入待办事项...",
+                todoList: [{
+                    id: 0,
+                    text: "天气",
+                    isFinish: false,
+                    isSeen: false
+                }, {
+                    id: 1,
+                    text: "馒头",
+                    isFinish: false,
+                    isSeen: false
+                }]
+            },
+            methods: {
+                recoverInputInfo() {
+                    this.inputInfo = "请输入待办事项..."
+                },
+                clearInputInfo() {
+                    this.inputInfo = ""
+                },
+                switchTodoFinish(index) {
+                    this.todoList[index].isFinish = !this.todoList[index].isFinish
+                },
+                switchIconSeen(index) {
+                    this.todoList[index].isSeen = true
+                },
+                switchIconNoSeen(index) {
+                    this.todoList[index].isSeen = false
+                },
+                addTodo() {
+                    if (this.inputInfo == "" || this.inputInfo == "请输入待办事项...") {
+                        return
+                    }
+                    this.todoList.push({
+                        text: this.inputInfo,
+                        isFinish: false,
+                        isSeen: false
+                    })
+                    this.inputInfo = ""
+                },
+                deleteTodo(index) {
+                    this.todoList.splice(index, 1)
+
+                },
+                clearAllTodo() {
+                    this.todoList = []
+                }
+            },
+            mounted() {
+                $.get("{:url('localhost:9292/todo')}", data, function(e) {
+                    // 赋值给data 中list
+                    this.todoList = e
+                })
+            }
+        })
+    </SCript>
+</body>
+
+</html>

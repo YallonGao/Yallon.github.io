@@ -1,19 +1,27 @@
-# gin框架小练习
-## todo待办清单
+## 技术栈
 
-### 下载
-```bash
-git clone https://github.com/mizhexiaoxiao/todo.git
-```
+前端：vue3
+
+后端：gin+gorm框架
+
+## 无后端启动
+
+从html启动，点击./template/index
+
+## 有后端启动
+
 ### 配置MySQL
-1. 在你的数据库中执行以下命令，创建本项目所用的数据库：
+
+1.创建数据库
+
 ```sql
-CREATE DATABASE t_todo DEFAULT CHARSET=utf8mb4;
+CREATE DATABASE yallon_todo DEFAULT CHARSET=utf8mb4;
 ```
+
 2. 在`todo/conf/config.ini`文件中按如下提示配置数据库连接信息。
 
 ```ini
-port = 9000
+port = 9292
 release = false
 
 [mysql]
@@ -31,16 +39,9 @@ go build
 
 ### 执行
 
-Mac/Unix：
-```bash
-./todo conf/config.ini
-```
 Windows:
 ```bash
 todo.exe conf/config.ini
 ```
 
-启动之后，使用浏览器打开`http://127.0.0.1:9000/`即可。
-
-### 代码参考
-https://github.com/Q1mi/bubble
+启动之后，使用浏览器打开`http://localhost:9292/`。

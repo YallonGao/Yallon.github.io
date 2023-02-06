@@ -1,8 +1,6 @@
 package settings
 
-import (
-	"gopkg.in/ini.v1"
-)
+import "gopkg.in/ini.v1"
 
 var Conf = new(AppConfig)
 
@@ -11,7 +9,6 @@ type AppConfig struct {
 	Port         int  `ini:"port"`
 	*MySQLConfig `ini:"mysql"`
 }
-
 type MySQLConfig struct {
 	User     string `ini:"user"`
 	Password string `ini:"password"`
