@@ -5,16 +5,15 @@
 # Name of your site (displayed in the header)
 name: "Yallon's blog"
 # Short bio or description (displayed in the header)
-description: "遇见明天的自己"
+description: "今天是为了遇见明天的自己"
 
 #
 # Flags below are optional
 #
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://github.com/lemonchann/images/raw/master/gzh/%E6%96%87%E6%9C%AB%E6%8E%A8%E5%B9%BF%E6%96%87%E6%A1%88.png
-# 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
-favicon: https://github.com/lemonchann/lemonchann.github.io/raw/master/images/favicon.ico
+avatar: https://avatars.githubusercontent.com/u/57307561?s=400&u=e82240a7da084d4ff40aaf99973506887360a936&v=4
+favicon: https://github.com/yallongao/yallongao.github.io/blog/assets/info/favicon.ico
 
 # Tabs in header. There are 'Blog', 'About', 'Archive', 'Tags'
 # and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
@@ -30,7 +29,7 @@ navigation:
     url: /tags
 
 # Pagination
-paginate: 10
+paginate: 8
 
 excerpt_separator: <!-- more -->
 
@@ -43,7 +42,7 @@ footer-links:
   email: yallongao@gmail.com
   facebook:
   flickr:
-  github: YallonGao
+  github: yallongao
   googleplus: # anything in your profile username that comes after plus.google.com/
   instagram:
   linkedin:
@@ -69,17 +68,17 @@ gitalk:
   owner: yallongao
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-# google_analytics:
+#google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://yallongao.github.io
+url: https://yallongao.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: url
+# baseurl:
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -104,7 +103,7 @@ kramdown:
 # Set the Sass partials directory, as we're using @imports
 sass:
   style: :expanded # You might prefer to minify using :compressed
-  sass_dir: /_sass
+
 # Use the following plug-ins
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
@@ -117,7 +116,4 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-# If your blog in https://<username>/github.io/blog not in https://<username>/github.io/,
-# you can refer this official article (https://jekyllrb.com/docs/configuration/default/)
-layouts_dir: _layouts
-includes_dir: _includes
+  - CNAME
