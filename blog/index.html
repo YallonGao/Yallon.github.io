@@ -20,10 +20,6 @@ layout: default
 
 <!--script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script-->
 <script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
-<script src="{{ site.url }}"></script>
-<script src="{{ post.url }}"></script>
-<script src="{{ post.baseurl }}"></script>
-<script src="{{ site.baseurl }}"></script>
 
 <script>
 	window.simpleJekyllSearch = new SimpleJekyllSearch({
@@ -75,7 +71,11 @@ layout: default
   {% endunless %}
   {% endfor %}
 </div>
+  测试
+<div>
 
+
+</div>
 <div class="pagination">
   {% if paginator.previous_page %}
     <span class="prev">
