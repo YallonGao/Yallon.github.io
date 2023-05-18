@@ -2,12 +2,6 @@
 layout: default
 ---
 <div class="search-container">
-  <div>111{{site.baseurl}}</div>
-  <div>{site.baseurl}</div>
-
-  <div>2222{{post.baseurl}}</div>
-  <div>2222{post.baseurl}</div>
-
   <input type="text" id="search-input" placeholder="search blog posts..." style="width: 90%;
     height: 35px;
     color: #333;
@@ -25,6 +19,10 @@ layout: default
 </div>
 
 <!--script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script-->
+<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+<script src="{{ site.url }}/js/simple-jekyll-search.min.js"></script>
+<script src="{{ post.url }}/js/simple-jekyll-search.min.js"></script>
+<script src="{{ post.baseurl }}/js/simple-jekyll-search.min.js"></script>
 <script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
 
 <script>
