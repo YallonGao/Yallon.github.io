@@ -79,7 +79,7 @@ url: https://yallongao.github.io/blog/
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-# baseurl:
+baseurl: /blog
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -104,7 +104,7 @@ kramdown:
 # Set the Sass partials directory, as we're using @imports
 sass:
   style: :expanded # You might prefer to minify using :compressed
-  sass_dir: /_sass
+  # sass_dir: /_sass
 # Use the following plug-ins
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
@@ -117,8 +117,7 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-
 # If your blog in https://<username>/github.io/blog not in https://<username>/github.io/,
 # you can refer this official article (https://jekyllrb.com/docs/configuration/default/)
-layouts_dir: _layouts
-includes_dir: _includes
+# layouts_dir: _layouts
+# includes_dir: _includes
