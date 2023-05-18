@@ -120,6 +120,5 @@ exclude:
 
 # If your blog in https://<username>/github.io/blog not in https://<username>/github.io/,
 # you can refer this official article (https://jekyllrb.com/docs/configuration/default/)
-# layouts_dir: _layouts
-# includes_dir: _includes
-source: /blog
+layouts_dir: _layouts
+includes_dir: _includes
