@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-18T22:12:50+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">lemon’s blog</title><subtitle>个人技术公众号：程序员柠檬  分享编程资源 | 学习路线</subtitle><entry><title type="html">可能是最全面的github pages搭建个人博客教程</title><link href="http://localhost:4000/create_blog_with_github_pages/" rel="alternate" type="text/html" title="可能是最全面的github pages搭建个人博客教程" /><published>2019-11-22T00:00:00+08:00</published><updated>2019-11-22T00:00:00+08:00</updated><id>http://localhost:4000/create_blog_with_github_pages</id><content type="html" xml:base="http://localhost:4000/create_blog_with_github_pages/"><![CDATA[<p>作为一个程序员怎么能没有自己的个人博客呢，这里详细记录和分享我的博客搭建经验，让你轻轻松松拥有自己的博客网站。傻瓜式一站式教你用 github pages 来搭建博客，详细记录全过程，保证你能学会。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/blog2/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog2/" rel="alternate" type="text/html" /><updated>2023-05-19T10:52:05+08:00</updated><id>http://localhost:4000/blog2/feed.xml</id><title type="html">lemon’s blog</title><subtitle>个人技术公众号：程序员柠檬  分享编程资源 | 学习路线</subtitle><entry><title type="html">可能是最全面的github pages搭建个人博客教程</title><link href="http://localhost:4000/blog2/create_blog_with_github_pages/" rel="alternate" type="text/html" title="可能是最全面的github pages搭建个人博客教程" /><published>2019-11-22T00:00:00+08:00</published><updated>2019-11-22T00:00:00+08:00</updated><id>http://localhost:4000/blog2/create_blog_with_github_pages</id><content type="html" xml:base="http://localhost:4000/blog2/create_blog_with_github_pages/"><![CDATA[<p>作为一个程序员怎么能没有自己的个人博客呢，这里详细记录和分享我的博客搭建经验，让你轻轻松松拥有自己的博客网站。傻瓜式一站式教你用 github pages 来搭建博客，详细记录全过程，保证你能学会。</p>
 
 <p>如果你是非程序员或者不关系技术细节，只需花 3 分钟阅读前面 5 个章节内容，就能轻松拥有自己的博客。</p>
 
@@ -267,13 +267,13 @@ url: https://yourname.github.io
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="c">&lt;!--script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"&gt;&lt;/script--&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/js/simple-jekyll-search.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/blog2/js/simple-jekyll-search.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
 <span class="nt">&lt;script&gt;</span>
 	<span class="nb">window</span><span class="p">.</span><span class="nx">simpleJekyllSearch</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SimpleJekyllSearch</span><span class="p">({</span>
 	<span class="na">searchInput</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">search-input</span><span class="dl">'</span><span class="p">),</span>
 	<span class="na">resultsContainer</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">results-container</span><span class="dl">'</span><span class="p">),</span>
-	<span class="na">json</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/search.json</span><span class="dl">'</span><span class="p">,</span>
+	<span class="na">json</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/blog2/search.json</span><span class="dl">'</span><span class="p">,</span>
 	<span class="na">searchResultTemplate</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;li&gt;&lt;a href="{url}?query={query}" title="{desc}"&gt;{title}&lt;/a&gt;&lt;/li&gt;</span><span class="dl">'</span><span class="p">,</span>
 	<span class="na">noResultsText</span><span class="p">:</span> <span class="dl">'</span><span class="s1">No results found</span><span class="dl">'</span><span class="p">,</span>
 	<span class="na">limit</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
@@ -287,7 +287,7 @@ url: https://yourname.github.io
 
 <p><code class="language-plaintext highlighter-rouge">&lt;script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"&gt;&lt;/script--&gt; </code></p>
 
-<p><code class="language-plaintext highlighter-rouge">&lt;script src="/js/simple-jekyll-search.min.js"&gt;&lt;/script&gt;</code></p>
+<p><code class="language-plaintext highlighter-rouge">&lt;script src="/blog2/js/simple-jekyll-search.min.js"&gt;&lt;/script&gt;</code></p>
 
 <p>配置完成，打开博客，你得到这样一个搜索框。</p>
 
