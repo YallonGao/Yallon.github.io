@@ -1,2 +1,6 @@
+# 测试代码
 test/
-_site/
+
+# 博客
+blog/_site/
+blog/.sass-cache/
