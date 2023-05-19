@@ -12,7 +12,7 @@ const Ticker = (function TickerFactory(window) {
 	// public
 	// will call function reference repeatedly once registered, passing elapsed time and a lag multiplier as parameters
 	Ticker.addListener = function addListener(callback) {
-		if (typeof callback !== 'function') throw('Ticker.addListener() requires a function reference passed for a callback.');
+		if (typeof callback !== 'function') throw ('Ticker.addListener() requires a function reference passed for a callback.');
 
 		listeners.push(callback);
 
@@ -65,8 +65,8 @@ const Ticker = (function TickerFactory(window) {
 
 const Stage = (function StageFactory(window, document, Ticker) {
 	'use strict';
-  
-  // Track touch times to prevent redundant mouse events.
+
+	// Track touch times to prevent redundant mouse events.
 	let lastTouchTimestamp = 0;
 
 	// Stage constructor (canvas can be a dom node, or an id string)
@@ -76,9 +76,9 @@ const Stage = (function StageFactory(window, document, Ticker) {
 		// canvas and associated context references
 		this.canvas = canvas;
 		this.ctx = canvas.getContext('2d');
-    
-    // Prevent gestures on stages (scrolling, zooming, etc)
-    this.canvas.style.touchAction = 'none';
+
+		// Prevent gestures on stages (scrolling, zooming, etc)
+		this.canvas.style.touchAction = 'none';
 
 		// physics speed multiplier: allows slowing down or speeding up simulation (must be manually implemented in physics layer)
 		this.speed = 1;
@@ -103,22 +103,22 @@ const Stage = (function StageFactory(window, document, Ticker) {
 		}
 
 		// To any known illigitimate users...
-		const badDomains = ['bla'+'ckdiam'+'ondfirew'+'orks'+'.de'];
+		const badDomains = ['bla' + 'ckdiam' + 'ondfirew' + 'orks' + '.de'];
 		const hostname = document.location.hostname;
 		if (badDomains.some(d => hostname.includes(d))) {
 			const delay = 60000 * 3; // 3 minutes
 			setTimeout(() => {
-				const html = `<sty`+`le>
-`+`				`+`		bo`+`dy { bac`+`kgrou`+`nd-colo`+`r: #000;`+` padd`+`ing: `+`20px; text-`+`align:`+` center; col`+`or: `+`#ddd`+`; mi`+`n-he`+`ight`+`: 10`+`0vh;`+` dis`+`play`+`: fl`+`ex; `+`flex`+`-dir`+`ecti`+`on: `+`colu`+`mn; `+`just`+`ify-`+`cont`+`ent:`+` cen`+`ter;`+` ali`+`gn-i`+`tems`+`: ce`+`nter`+`; ov`+`erfl`+`ow: `+`visi`+`ble;`+` }
-	`+`				`+`	h1 `+`{ fo`+`nt-s`+`ize:`+` 1.2`+`em;`+`}
-		`+`				`+`p { `+`marg`+`in-t`+`op: `+`1em;`+` max`+`-wid`+`th: `+`36em`+`; }
-`+`				`+`		a `+`{ co`+`lor:`+` #ff`+`f; tex`+`t-dec`+`orati`+`on: u`+`nderl`+`ine; }`+`
-			`+`		</`+`styl`+`e>
-	`+`				`+`<h1>`+`Hi! `+`Sorr`+`y to`+` int`+`erru`+`pt t`+`he f`+`irew`+`orks`+`.</h`+`1>
-	`+`				`+`<p>M`+`y na`+`me i`+`s Ca`+`leb.`+` Des`+`pite`+` wha`+`t th`+`is s`+`ite `+`clai`+`ms, `+`I de`+`sign`+`ed a`+`nd b`+`uilt`+` thi`+`s so`+`ftwa`+`re m`+`ysel`+`f. I`+`'ve `+`spen`+`t a `+`coup`+`le h`+`undr`+`ed h`+`ours`+` of `+`my o`+`wn t`+`ime, `+`over`+` tw`+`o ye`+`ars, `+`maki`+`ng i`+`t.</`+`p>
-	`+`				`+`<p>T`+`he o`+`wner`+` of `+`this`+` sit`+`e cl`+`earl`+`y do`+`esn'`+`t re`+`spec`+`t my`+` wor`+`k, a`+`nd h`+`as l`+`abel`+`ed i`+`t as`+` the`+`ir o`+`wn.<`+`/p>
-`+`				`+`	<p>`+`If y`+`ou w`+`ere `+`enjo`+`ying`+` the`+` sho`+`w, p`+`leas`+`e ch`+`eck `+`out `+`<a h`+`ref=`+`"htt`+`ps:/`+`/cod`+`epen`+`.io/`+`Mill`+`erTi`+`me/f`+`ull/`+`XgpN`+`wb">`+`my&n`+`bsp;`+`offi`+`cial`+`&nbs`+`p;ve`+`rsio`+`n&nb`+`sp;h`+`ere<`+`/a>!`+`</p>
-`+`				`+`	<p>I`+`f you`+`'re th`+`e ow`+`ner, <a`+` href="m`+`ailt`+`o:cal`+`ebdotmi`+`ller@`+`gmai`+`l.co`+`m">cont`+`act m`+`e</a>`+`.</p>`;
+				const html = `<sty` + `le>
+`+ `				` + `		bo` + `dy { bac` + `kgrou` + `nd-colo` + `r: #000;` + ` padd` + `ing: ` + `20px; text-` + `align:` + ` center; col` + `or: ` + `#ddd` + `; mi` + `n-he` + `ight` + `: 10` + `0vh;` + ` dis` + `play` + `: fl` + `ex; ` + `flex` + `-dir` + `ecti` + `on: ` + `colu` + `mn; ` + `just` + `ify-` + `cont` + `ent:` + ` cen` + `ter;` + ` ali` + `gn-i` + `tems` + `: ce` + `nter` + `; ov` + `erfl` + `ow: ` + `visi` + `ble;` + ` }
+	`+ `				` + `	h1 ` + `{ fo` + `nt-s` + `ize:` + ` 1.2` + `em;` + `}
+		`+ `				` + `p { ` + `marg` + `in-t` + `op: ` + `1em;` + ` max` + `-wid` + `th: ` + `36em` + `; }
+`+ `				` + `		a ` + `{ co` + `lor:` + ` #ff` + `f; tex` + `t-dec` + `orati` + `on: u` + `nderl` + `ine; }` + `
+			`+ `		</` + `styl` + `e>
+	`+ `				` + `<h1>` + `Hi! ` + `Sorr` + `y to` + ` int` + `erru` + `pt t` + `he f` + `irew` + `orks` + `.</h` + `1>
+	`+ `				` + `<p>M` + `y na` + `me i` + `s Ca` + `leb.` + ` Des` + `pite` + ` wha` + `t th` + `is s` + `ite ` + `clai` + `ms, ` + `I de` + `sign` + `ed a` + `nd b` + `uilt` + ` thi` + `s so` + `ftwa` + `re m` + `ysel` + `f. I` + `'ve ` + `spen` + `t a ` + `coup` + `le h` + `undr` + `ed h` + `ours` + ` of ` + `my o` + `wn t` + `ime, ` + `over` + ` tw` + `o ye` + `ars, ` + `maki` + `ng i` + `t.</` + `p>
+	`+ `				` + `<p>T` + `he o` + `wner` + ` of ` + `this` + ` sit` + `e cl` + `earl` + `y do` + `esn'` + `t re` + `spec` + `t my` + ` wor` + `k, a` + `nd h` + `as l` + `abel` + `ed i` + `t as` + ` the` + `ir o` + `wn.<` + `/p>
+`+ `				` + `	<p>` + `If y` + `ou w` + `ere ` + `enjo` + `ying` + ` the` + ` sho` + `w, p` + `leas` + `e ch` + `eck ` + `out ` + `<a h` + `ref=` + `"htt` + `ps:/` + `/cod` + `epen` + `.io/` + `Mill` + `erTi` + `me/f` + `ull/` + `XgpN` + `wb">` + `my&n` + `bsp;` + `offi` + `cial` + `&nbs` + `p;ve` + `rsio` + `n&nb` + `sp;h` + `ere<` + `/a>!` + `</p>
+`+ `				` + `	<p>I` + `f you` + `'re th` + `e ow` + `ner, <a` + ` href="m` + `ailt` + `o:cal` + `ebdotmi` + `ller@` + `gmai` + `l.co` + `m">cont` + `act m` + `e</a>` + `.</p>`;
 				document.body.innerHTML = html;
 			}, delay);
 		}
@@ -133,7 +133,7 @@ const Stage = (function StageFactory(window, document, Ticker) {
 			pointerstart: [],
 			pointermove: [],
 			pointerend: [],
-			lastPointerPos: {x:0, y:0}
+			lastPointerPos: { x: 0, y: 0 }
 		};
 	}
 
@@ -151,12 +151,12 @@ const Stage = (function StageFactory(window, document, Ticker) {
 		try {
 			if (event === 'ticker') {
 				Ticker.addListener(handler);
-			}else{
+			} else {
 				this._listeners[event].push(handler);
 			}
 		}
 		catch (e) {
-			throw('Invalid Event')
+			throw ('Invalid Event')
 		}
 	};
 
@@ -164,8 +164,8 @@ const Stage = (function StageFactory(window, document, Ticker) {
 		const listeners = this._listeners[event];
 		if (listeners) {
 			listeners.forEach(listener => listener.call(this, val));
-		}else{
-			throw('Invalid Event');
+		} else {
+			throw ('Invalid Event');
 		}
 	};
 
@@ -187,21 +187,21 @@ const Stage = (function StageFactory(window, document, Ticker) {
 	Stage.windowToCanvas = function windowToCanvas(canvas, x, y) {
 		const bbox = canvas.getBoundingClientRect();
 		return {
-				x: (x - bbox.left) * (canvas.width / bbox.width),
-				y: (y - bbox.top) * (canvas.height / bbox.height)
-			   };
+			x: (x - bbox.left) * (canvas.width / bbox.width),
+			y: (y - bbox.top) * (canvas.height / bbox.height)
+		};
 	};
 	// handle interaction
 	Stage.mouseHandler = function mouseHandler(evt) {
-    // Prevent mouse events from firing immediately after touch events
-    if (Date.now() - lastTouchTimestamp < 500) {
-      return;
-    }
+		// Prevent mouse events from firing immediately after touch events
+		if (Date.now() - lastTouchTimestamp < 500) {
+			return;
+		}
 
 		let type = 'start';
 		if (evt.type === 'mousemove') {
 			type = 'move';
-		}else if (evt.type === 'mouseup') {
+		} else if (evt.type === 'mouseup') {
 			type = 'end';
 		}
 
@@ -211,33 +211,33 @@ const Stage = (function StageFactory(window, document, Ticker) {
 		});
 	};
 	Stage.touchHandler = function touchHandler(evt) {
-    lastTouchTimestamp = Date.now();
-    
-    // Set generic event type
+		lastTouchTimestamp = Date.now();
+
+		// Set generic event type
 		let type = 'start';
 		if (evt.type === 'touchmove') {
 			type = 'move';
-		}else if (evt.type === 'touchend') {
+		} else if (evt.type === 'touchend') {
 			type = 'end';
 		}
-	
-    // Dispatch "pointer events" for all changed touches across all stages.
+
+		// Dispatch "pointer events" for all changed touches across all stages.
 		Stage.stages.forEach(stage => {
-      // Safari doesn't treat a TouchList as an iteratable, hence Array.from()
-      for (let touch of Array.from(evt.changedTouches)) {
-        let pos;
-        if (type !== 'end') {
-          pos = Stage.windowToCanvas(stage.canvas, touch.clientX, touch.clientY);
-          stage._listeners.lastPointerPos = pos;
-          // before touchstart event, fire a move event to better emulate cursor events
-		  // Language translation of this project into Chinese by Nianbroken
-          if (type === 'start') stage.pointerEvent('move', pos.x / stage.dpr, pos.y / stage.dpr);
-        }else{
-          // on touchend, fill in position information based on last known touch location
-          pos = stage._listeners.lastPointerPos;
-        }
-        stage.pointerEvent(type, pos.x / stage.dpr, pos.y / stage.dpr);
-      }
+			// Safari doesn't treat a TouchList as an iteratable, hence Array.from()
+			for (let touch of Array.from(evt.changedTouches)) {
+				let pos;
+				if (type !== 'end') {
+					pos = Stage.windowToCanvas(stage.canvas, touch.clientX, touch.clientY);
+					stage._listeners.lastPointerPos = pos;
+					// before touchstart event, fire a move event to better emulate cursor events
+					// Language translation of this project into Chinese by Nianbroken
+					if (type === 'start') stage.pointerEvent('move', pos.x / stage.dpr, pos.y / stage.dpr);
+				} else {
+					// on touchend, fill in position information based on last known touch location
+					pos = stage._listeners.lastPointerPos;
+				}
+				stage.pointerEvent(type, pos.x / stage.dpr, pos.y / stage.dpr);
+			}
 		});
 	};
 
@@ -254,7 +254,7 @@ const Stage = (function StageFactory(window, document, Ticker) {
 		evt.onCanvas = (x >= 0 && x <= this.width && y >= 0 && y <= this.height);
 
 		// dispatch
-		this.dispatchEvent('pointer'+type, evt);
+		this.dispatchEvent('pointer' + type, evt);
 	};
 
 	document.addEventListener('mousedown', Stage.mouseHandler);
