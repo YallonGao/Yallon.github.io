@@ -3,17 +3,18 @@
 #
 
 # Name of your site (displayed in the header)
-name: "Yallon's blog"
+name: "lemon's blog"
 # Short bio or description (displayed in the header)
-description: "今天是为了遇见明天的自己"
+description: "个人技术公众号：程序员柠檬  分享编程资源 | 学习路线"
 
 #
 # Flags below are optional
 #
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars.githubusercontent.com/u/57307561?s=400&u=e82240a7da084d4ff40aaf99973506887360a936&v=4
-favicon: https://github.com/yallongao/yallongao.github.io/blog/assets/info/favicon.ico
+avatar: https://github.com/lemonchann/images/raw/master/gzh/%E6%96%87%E6%9C%AB%E6%8E%A8%E5%B9%BF%E6%96%87%E6%A1%88.png
+# 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
+favicon: https://github.com/lemonchann/lemonchann.github.io/raw/master/images/favicon.ico
 
 # Tabs in header. There are 'Blog', 'About', 'Archive', 'Tags'
 # and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
@@ -38,11 +39,11 @@ footer-links:
   #weibo: frommidworld #请输入你的微博个性域名 https://www.weibo.com/<thispart>
   behance: # https://www.behance.net/<username>
   dribbble:
-  zhihu:
-  email: yallongao@gmail.com
+  zhihu: ning-meng-cheng-31-94
+  email: llong87@163.com
   facebook:
   flickr:
-  github: yallongao
+  github: lemonchann 
   googleplus: # anything in your profile username that comes after plus.google.com/
   instagram:
   linkedin:
@@ -54,7 +55,7 @@ footer-links:
   youtube:
 
 # Text under the icons in footer
-footer-text: Copyright (c) 2023 YallonGao
+footer-text: Copyright (c) 2019 lemon
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -62,23 +63,23 @@ disqus: # fromendworld
 
 # Gitalk
 gitalk:
-  clientID: 99d6e27fdbb13ef62409
-  clientSecret: 1be611185d17c960ab9a85cb31710ad4be7e636c
-  repo: yallongao.github.io
-  owner: yallongao
+  clientID: bd65d5c0df878155b7fa
+  clientSecret: d0220762c05c2d6b6f6152a0f0e4b6b090de9729
+  repo: lemonchann.github.io
+  owner: lemonchann
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-#google_analytics:
+#google_analytics: 
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://yallongao.github.io
+url: https://lemonchann.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-# baseurl: /blog
+# baseurl: 
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -98,12 +99,11 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
-    css_class: "highlight"
+    css_class: 'highlight'
 
 # Set the Sass partials directory, as we're using @imports
 sass:
   style: :expanded # You might prefer to minify using :compressed
-  sass_dir: /_sass
 
 # Use the following plug-ins
 plugins:
@@ -118,3 +118,4 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
