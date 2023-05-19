@@ -78,7 +78,7 @@ url: https://yallongao.github.io
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: /blog
+# baseurl: /blog
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -102,8 +102,8 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: compressed # You might prefer to minify using :compressed
-  sass_dir: _sass
+  style: :expanded # You might prefer to minify using :compressed
+  sass_dir: /_sass
 
 # Use the following plug-ins
 plugins:
