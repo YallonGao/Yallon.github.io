@@ -2,5 +2,5 @@
 test/
 
 # 博客
-blog/_site/
-blog/.sass-cache/
+docs/_site/
+docs/.sass-cache/
